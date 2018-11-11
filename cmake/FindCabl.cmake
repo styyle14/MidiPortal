@@ -1,9 +1,11 @@
 message (STATUS "Checking for Cabl...")
 find_path(CABL_INCLUDE_DIRS
-		cabl/cabl.h
+		cabl.h
 	PATHS
 		/usr/include
 		/usr/local/include
+	PATH_SUFFIXES
+		cabl
 )
 find_library(CABL_LIBRARIES
 	NAMES

@@ -3,9 +3,9 @@ find_path(RTMIDI_INCLUDE_DIRS
 		RtMidi.h
 	PATHS
 		/usr/include
-		/usr/include/rtmidi
 		/usr/local/include
-		/usr/local/include/rtmidi
+	PATH_SUFFIXES
+		rtmidi
 )
 find_library(RTMIDI_LIBRARIES
 	NAMES

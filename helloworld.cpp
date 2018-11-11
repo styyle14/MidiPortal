@@ -1,15 +1,104 @@
 #include "helloworld.hpp"
 #include <iostream>
+#include <RtMidi.h>
 
+Minerer::Minerer() : sl::cabl::Client({"Maschine Jam"})
+{
+}
+void Minerer::init(){
+	//RtMidiIn  *midiin = 0;
+	//RtMidiOut *midiout = 0;
+	std::cout << "\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.\n";
+	//try {
+		//midiin = new RtMidiIn();
+	//} catch (RtMidiError &error) {
+	//// Handle the exception here
+		//error.printMessage();
+	//}
+	//// Check inputs.
+	//unsigned int nPorts = midiin->getPortCount();
+	//std::cout << "\nThere are " << nPorts << " MIDI input sources available.\n";
+	//std::string portName;
+	//for ( unsigned int i=0; i<nPorts; i++ ) {
+		//try {
+			//portName = midiin->getPortName(i);
+		//}
+		//catch ( RtMidiError &error ) {
+			//error.printMessage();
+			//goto cleanup;
+		//}
+		//std::cout << "  Input Port #" << i+1 << ": " << portName << '\n';
+	//}
+	//// Clean up
+	//cleanup:
+		//delete midiin;
+}
+void Minerer::initDevice(){ 
+	std::cout << "\nYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY.\n";
+}
 void Minerer::disconnected(){ }
 void Minerer::buttonChanged(sl::cabl::Device::Button button_, bool buttonState_, bool shiftPressed_){
-	std::cout << "Goodebye Moon!" << std::endl;
+	sl::cabl::Client::buttonChanged(button_, buttonState_, shiftPressed_);
 }
-void Minerer::encoderChanged(unsigned encoder_, bool valueIncreased_, bool shiftPressed_){ }
-void Minerer::keyChanged(unsigned index_, double value_, bool shiftPressed){ }
-void Minerer::controlChanged(unsigned pot_, double value_, bool shiftPressed){ }
-void Minerer::initDevice(){ }
+void Minerer::encoderChanged(unsigned encoder_, bool valueIncreased_, bool shiftPressed_){
+	sl::cabl::Client::encoderChanged(encoder_, valueIncreased_, shiftPressed_);
+}
+void Minerer::keyChanged(unsigned index_, double value_, bool shiftPressed){
+	sl::cabl::Client::keyChanged(index_, value_, shiftPressed);
+}
+void Minerer::controlChanged(unsigned pot_, double value_, bool shiftPressed){
+	sl::cabl::Client::controlChanged(pot_, value_, shiftPressed);
+}
 void Minerer::render(){ }
+
+Ninerer::Ninerer() : sl::cabl::Client({"KOMPLETE KONTROL S25"})
+{
+}
+void Ninerer::init(){
+	//RtMidiIn  *midiin = 0;
+	//RtMidiOut *midiout = 0;
+	std::cout << "\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.\n";
+	//try {
+		//midiin = new RtMidiIn();
+	//} catch (RtMidiError &error) {
+	//// Handle the exception here
+		//error.printMessage();
+	//}
+	//// Check inputs.
+	//unsigned int nPorts = midiin->getPortCount();
+	//std::cout << "\nThere are " << nPorts << " MIDI input sources available.\n";
+	//std::string portName;
+	//for ( unsigned int i=0; i<nPorts; i++ ) {
+		//try {
+			//portName = midiin->getPortName(i);
+		//}
+		//catch ( RtMidiError &error ) {
+			//error.printMessage();
+			//goto cleanup;
+		//}
+		//std::cout << "  Input Port #" << i+1 << ": " << portName << '\n';
+	//}
+	//// Clean up
+	//cleanup:
+		//delete midiin;
+}
+void Ninerer::initDevice(){ 
+	std::cout << "\nYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY.\n";
+}
+void Ninerer::disconnected(){ }
+void Ninerer::buttonChanged(sl::cabl::Device::Button button_, bool buttonState_, bool shiftPressed_){
+	sl::cabl::Client::buttonChanged(button_, buttonState_, shiftPressed_);
+}
+void Ninerer::encoderChanged(unsigned encoder_, bool valueIncreased_, bool shiftPressed_){
+	sl::cabl::Client::encoderChanged(encoder_, valueIncreased_, shiftPressed_);
+}
+void Ninerer::keyChanged(unsigned index_, double value_, bool shiftPressed){
+	sl::cabl::Client::keyChanged(index_, value_, shiftPressed);
+}
+void Ninerer::controlChanged(unsigned pot_, double value_, bool shiftPressed){
+	sl::cabl::Client::controlChanged(pot_, value_, shiftPressed);
+}
+void Ninerer::render(){ }
 
 HelloWorld::HelloWorld()
 : m_button("Hello World")   // creates a new button with label "Hello World".

@@ -8,17 +8,34 @@
 
 class Minerer : public sl::cabl::Client
 {
-public:  
-  void init();
+public:
+	Minerer();
+	void init();
 
-  void disconnected();
-  void buttonChanged(sl::cabl::Device::Button button_, bool buttonState_, bool shiftPressed_);
-  void encoderChanged(unsigned encoder_, bool valueIncreased_, bool shiftPressed_);
-  void keyChanged(unsigned index_, double value_, bool shiftPressed);
-  void controlChanged(unsigned pot_, double value_, bool shiftPressed);
+	void disconnected();
+	void buttonChanged(sl::cabl::Device::Button button_, bool buttonState_, bool shiftPressed_);
+	void encoderChanged(unsigned encoder_, bool valueIncreased_, bool shiftPressed_);
+	void keyChanged(unsigned index_, double value_, bool shiftPressed);
+	void controlChanged(unsigned pot_, double value_, bool shiftPressed);
 
-  void initDevice();
-  void render();
+	void initDevice();
+	void render();
+};
+
+class Ninerer : public sl::cabl::Client
+{
+public:
+	Ninerer();
+	void init();
+
+	void disconnected();
+	void buttonChanged(sl::cabl::Device::Button button_, bool buttonState_, bool shiftPressed_);
+	void encoderChanged(unsigned encoder_, bool valueIncreased_, bool shiftPressed_);
+	void keyChanged(unsigned index_, double value_, bool shiftPressed);
+	void controlChanged(unsigned pot_, double value_, bool shiftPressed);
+
+	void initDevice();
+	void render();
 };
 
 class HelloWorld : public Gtk::Window
