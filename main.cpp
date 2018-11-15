@@ -11,7 +11,6 @@ int main (int argc, char *argv[])
 
 	HelloWorld helloworld;
 	Minerer minerer;
-	Ninerer ninerer;
 	app->run(helloworld);
 
 	//Shows the window and returns when it is closed.
