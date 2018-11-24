@@ -35,6 +35,17 @@ void Minerer::init(){
 }
 void Minerer::initDevice(){ 
 	std::cout << "\nYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY.\n";
+	device()->setButtonLed(sl::cabl::Device::Button::NativeInstruments, sl::cabl::Color(15));
+	device()->setButtonLed(sl::cabl::Device::Button::Play, sl::cabl::Color(15));
+	device()->setButtonLed(sl::cabl::Device::Button::Rec, sl::cabl::Color(15));
+	device()->setButtonLed(sl::cabl::Device::Button::Shift, sl::cabl::Color(15));
+	device()->setButtonLed(sl::cabl::Device::Button::Pad13, sl::cabl::Color(15));
+	device()->setButtonLed(sl::cabl::Device::Button::Pad10, sl::cabl::Color(15));
+	device()->setButtonLed(sl::cabl::Device::Button::Pad7, sl::cabl::Color(15));
+	device()->setButtonLed(sl::cabl::Device::Button::Pad4, sl::cabl::Color(15));
+	device()->setButtonLed(sl::cabl::Device::Button::SmartstripLed01, sl::cabl::Color(15));
+	device()->setButtonLed(sl::cabl::Device::Button::SmartstripLed13, sl::cabl::Color(15));
+	device()->setButtonLed(sl::cabl::Device::Button::SmartstripLed25, sl::cabl::Color(15));
 }
 void Minerer::disconnected(){ }
 void Minerer::buttonChanged(sl::cabl::Device::Button button_, bool buttonState_, bool shiftPressed_){
